@@ -22,9 +22,7 @@ newsletter_blurb: Get every post in your inbox — camps, robots and wins from o
 # Footer social links — remove any you don't use
 social:
   instagram: "https://instagram.com/wizkidzai"
-  facebook: "https://facebook.com/wizkidzai"
-  youtube: "https://youtube.com/@wizkidzai"
-  github: "https://github.com/wizkidzai"
+  website: "https://wizkidz.ai"
 
 permalink: /:year/:month/:title/
 markdown: kramdown
