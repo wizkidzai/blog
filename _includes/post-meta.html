@@ -1,0 +1,10 @@
+{% assign words = include.post.content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 180 %}
+{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+<span class="post-meta">
+  <span>{{ include.post.author | default: site.author }}</span>
+  <span aria-hidden="true">·</span>
+  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%B %-d, %Y" }}</time>
+  <span aria-hidden="true">·</span>
+  <span>{{ minutes }} min read</span>
+</span>

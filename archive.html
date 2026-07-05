@@ -1,0 +1,30 @@
+---
+layout: default
+title: Archive
+description: Every Wiz Kidz blog post, grouped by tag.
+permalink: /archive/
+---
+<section class="wrap-narrow archive">
+  <h1 class="page-title">Archive</h1>
+
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+  {% assign name = tag[0] %}
+  {% assign posts = tag[1] %}
+  <section class="archive-group" id="{{ name | slugify }}">
+    <h2 class="archive-tag"><span class="tag-pill">{{ name }}</span> <span class="archive-count">{{ posts.size }}</span></h2>
+    <ul class="archive-list">
+      {% for post in posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+
+  {% if site.tags.size == 0 %}
+  <p class="empty-state">Tags will appear here once you publish tagged posts.</p>
+  {% endif %}
+</section>

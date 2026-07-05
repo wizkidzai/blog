@@ -1,0 +1,10 @@
+{% if site.newsletter_action and site.newsletter_action != "" %}
+<aside class="newsletter-box" data-nosnippet>
+  <p class="newsletter-title">Never miss a post 👋</p>
+  <p class="newsletter-blurb">{{ site.newsletter_blurb }}</p>
+  <form class="newsletter-form" action="{{ site.newsletter_action }}" method="post" target="_blank">
+    <input class="newsletter-input" type="email" name="email" required placeholder="you@example.com" aria-label="Email address">
+    <button class="newsletter-btn" type="submit">Sign me up</button>
+  </form>
+</aside>
+{% endif %}

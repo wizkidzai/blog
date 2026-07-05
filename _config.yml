@@ -1,0 +1,43 @@
+# ── Wiz Kidz Blog · Jekyll configuration ─────────────────────────
+title: Wiz Kidz Blog
+tagline: Learn. Lead. Create.
+description: >-
+  News, camps, robotics tips and celebrations from
+  Wiz Kidz AI & Robotics — for curious kids and their grown-ups.
+url: "https://blog.wizkidz.ai"
+baseurl: ""
+lang: en
+
+# Default author shown when a post has no `author` in its front matter
+author: The Wiz Kidz Team
+
+# Paste your Google Analytics measurement ID (e.g. G-XXXXXXXXXX) to enable
+google_analytics: ""
+
+# Newsletter form action URL (Buttondown, Mailchimp, ConvertKit…).
+# Leave empty to hide the signup box.
+newsletter_action: ""
+newsletter_blurb: Get every post in your inbox — camps, robots and wins from our Wiz Kidz.
+
+# Footer social links — remove any you don't use
+social:
+  instagram: "https://instagram.com/wizkidzai"
+  facebook: "https://facebook.com/wizkidzai"
+  youtube: "https://youtube.com/@wizkidzai"
+  github: "https://github.com/wizkidzai"
+
+permalink: /:year/:month/:title/
+markdown: kramdown
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
