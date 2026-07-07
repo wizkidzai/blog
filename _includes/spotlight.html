@@ -1,0 +1,12 @@
+{% comment %}
+  Spotlight panel: circular image beside an eyebrow/title/text block.
+  Usage: {% include spotlight.html img="/assets/images/x.jpg" alt="..." eyebrow="..." title="..." text="..." %}
+{% endcomment %}
+<div class="spotlight">
+  <img class="spotlight-img" src="{{ include.img | relative_url }}" alt="{{ include.alt }}">
+  <div class="spotlight-body">
+    {% if include.eyebrow %}<p class="spotlight-eyebrow">{{ include.eyebrow }}</p>{% endif %}
+    {% if include.title %}<p class="spotlight-title">{{ include.title }}</p>{% endif %}
+    <p class="spotlight-text">{{ include.text }}</p>
+  </div>
+</div>

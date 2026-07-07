@@ -14,10 +14,14 @@
   {% include analytics.html %}
 </head>
 <body>
-  {% include header.html %}
-  <main class="site-main">
-    {{ content }}
-  </main>
-  {% include footer.html %}
+  <div class="page-shell">
+    <div class="site-card">
+      {% include header.html %}
+      <main class="site-main">
+        {{ content }}
+      </main>
+      {% include footer.html %}
+    </div>
+  </div>
 </body>
 </html>

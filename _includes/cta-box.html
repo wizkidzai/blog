@@ -1,0 +1,11 @@
+{% comment %}
+  CTA box: teal panel with optional eyebrow, image, title, blurb, and a pill button.
+  Usage: {% include cta-box.html eyebrow="..." img="/assets/images/x.png" alt="..." title="..." blurb="..." label="Join our Team!" url="https://wizkidz.ai/clubs" %}
+{% endcomment %}
+<div class="cta-box">
+  {% if include.eyebrow %}<p class="cta-eyebrow">{{ include.eyebrow }}</p>{% endif %}
+  {% if include.img %}<img class="cta-img" src="{{ include.img | relative_url }}" alt="{{ include.alt }}">{% endif %}
+  {% if include.title %}<p class="cta-title">{{ include.title }}</p>{% endif %}
+  {% if include.blurb %}<p class="cta-blurb">{{ include.blurb }}</p>{% endif %}
+  <a class="cta-btn" href="{{ include.url }}">{{ include.label }}</a>
+</div>

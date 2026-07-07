@@ -1,0 +1,14 @@
+{% comment %}
+  Event row: calendar date tile beside the event title and details.
+  Usage: {% include event-date.html month="Jul" day="09" title="..." details="..." %}
+{% endcomment %}
+<div class="event-row">
+  <div class="event-date" aria-hidden="true">
+    <div class="event-date-month">{{ include.month }}</div>
+    <div class="event-date-day">{{ include.day }}</div>
+  </div>
+  <div class="event-info">
+    <p class="event-title">{{ include.title }}</p>
+    {% if include.details %}<p class="event-sub">{{ include.details }}</p>{% endif %}
+  </div>
+</div>
