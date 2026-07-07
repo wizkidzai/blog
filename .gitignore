@@ -9,3 +9,7 @@ Gemfile.lock
 # Local tooling / assistant config — not part of the site
 .claude/
 domains-wizkidz.ai.txt
+
+# Private agents repo — must NEVER be committed or pushed to this public repo.
+# Kept as a plain local clone (NOT a submodule, so its URL never lands in git history).
+wizkidz-agents/

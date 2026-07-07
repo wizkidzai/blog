@@ -39,3 +39,4 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - wizkidz-agents/   # private — must never be published to the built site
